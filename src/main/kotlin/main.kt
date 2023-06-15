@@ -47,12 +47,16 @@ fun agoToText(timeExitToNow: Int): String {
 fun payment(payTipe: String, monthPay: Int, thisPay: Int): String = when {
     payTipe == "VK Pay" && thisPay > 15_000 -> "Вы превысили максимальную сумму" +
             " единовременного перевода VK Pay (15_000)"
-    payTipe == "VK Pay" && monthPay+thisPay > 40_000 -> "Вы превысили месячный" +
+
+    payTipe == "VK Pay" && monthPay + thisPay > 40_000 -> "Вы превысили месячный" +
             " лимит переводов VK Pay (40_000)"
+
     payTipe != "VK Pay" && thisPay > 150_000 -> "Вы превысили максимальную сумму" +
             " суточного перевода по карте (150_000)"
-    payTipe != "VK Pay" && monthPay+thisPay > 600_000 -> "Вы превысили месячный" +
+
+    payTipe != "VK Pay" && monthPay + thisPay > 600_000 -> "Вы превысили месячный" +
             " лимит переводов по карте (600_000)"
+
     else -> "Ваша комиссия составит: " + comission(payTipe, monthPay, thisPay) + " руб."
 }
 
