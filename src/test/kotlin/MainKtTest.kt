@@ -157,7 +157,7 @@ class MainKtTest {
 
         val result = payment(payTipe, monthPay, thisPay)
 
-        assertEquals("Ваша комиссия составит: 350.0 руб.", result) /*ломаем сборку*/
+        assertEquals("Ваша комиссия составит: 35.0 руб.", result) /*ломаем сборку*/
     }
 
 }
