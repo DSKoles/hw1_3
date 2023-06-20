@@ -1,4 +1,5 @@
 plugins {
+    id 'jacoco'
     id 'org.jetbrains.kotlin.jvm' version '1.8.21'
 }
 
@@ -11,11 +12,12 @@ repositories {
 
 dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    implementation 'junit:junit:4.13.2'
 }
 
-test {
-    useJUnitPlatform()
-}
+//test {
+//    useJUnitPlatform()
+//}
 
 kotlin {
     jvmToolchain(8)
